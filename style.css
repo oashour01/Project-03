@@ -47,6 +47,7 @@ h1 {
   border: none;
   border-radius: 5px;
   margin-bottom: 35px;
+  cursor: pointer;
 }
 
 hr {
@@ -67,8 +68,11 @@ hr {
   border-radius: 5px;
 }
 
-#password-one-el {
+#password-one-el,
+#password-two-el {
   font-family: "Inter", sans-serif;
+  text-align: center;
+  padding-top: 11px;
   font-size: 16pt;
   font-weight: 500;
   color: #10b981;
