@@ -1,8 +1,6 @@
 let passwordOneEl = document.getElementById("password-one-el");
 let passwordTwoEl = document.getElementById("password-two-el");
 let passwordLength = 15;
-let passwordOne = "";
-let passwordTwo = "";
 let getPassword = document.getElementById("generate-el");
 const characters = [
   "A",
@@ -103,20 +101,15 @@ function getRandomChar() {
   return characters[randomChar];
 }
 
-function generatePasswordOne() {
+function generatePassword() {
+  let password = "";
   for (let i = 0; i < passwordLength; i++) {
-    passwordOne += getRandomChar();
+    password += getRandomChar();
   }
-  return passwordOne;
+  return password;
 }
 
-function generatePasswordTwo() {
-  for (let i = 0; i < passwordLength; i++) {
-    passwordTwo += getRandomChar();
-  }
-  return passwordTwo;
-}
 getPassword.addEventListener("click", function () {
-  passwordOneEl.textContent = generatePasswordOne();
-  passwordTwoEl.textContent = generatePasswordTwo();
+  passwordOneEl.textContent = generatePassword();
+  passwordTwoEl.textContent = generatePassword();
 });
